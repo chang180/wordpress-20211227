@@ -70,14 +70,23 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'mj|{5hjv}aAtdBMUh^{F@p(F3)ikw4wN{A`,h}nX2ZBmu%%j;X=>C>MqErJn[kw9' );
-define( 'SECURE_AUTH_KEY',  'B$u:7TjXv}n&FAJK5&:C#?6*1*42HjEsIGZ;@*MtD)N8yQCxV?qe*:$<~ldsOXX[' );
-define( 'LOGGED_IN_KEY',    'fn~0sA,>Eb{7mcCfgYQN;*tD`c98Q$<hd/T.L-utFA_N(u !B3i|#Iccu7f>4k T' );
-define( 'NONCE_KEY',        'CN`G;dzEB9D&g|YLO@_&]>vF{m-5#tfY<-/c%E6t+-l!Y#DIkPl3Eog:d1-y,@|q' );
-define( 'AUTH_SALT',        'LCoog!EDu~iXszsx2~0,YF@>~kk4O~v@4l7EeX&79PCcm/~,eDu+./C!|[lP[.h~' );
-define( 'SECURE_AUTH_SALT', '58~6es0%k4zZ5^r $U(.t]OGeC?WKPb(,)X!7Iw:^$>^#^KiYGFEW2J 5Xa30=_F' );
-define( 'LOGGED_IN_SALT',   'vOf@%VV.?h*SAEnh%^Ufq;[r3`j(yqN24t}XXu8Z={#Lqv&7Z6H.@R(_Snc^jWf>' );
-define( 'NONCE_SALT',       '0!MUGYbM:e$j~Hh*DptV5&vK|bOS`wd~*Np_sC(ik2k@$H,XgEN6MyV#oc/R8Y&2' );
+// define( 'AUTH_KEY',         'mj|{5hjv}aAtdBMUh^{F@p(F3)ikw4wN{A`,h}nX2ZBmu%%j;X=>C>MqErJn[kw9' );
+// define( 'SECURE_AUTH_KEY',  'B$u:7TjXv}n&FAJK5&:C#?6*1*42HjEsIGZ;@*MtD)N8yQCxV?qe*:$<~ldsOXX[' );
+// define( 'LOGGED_IN_KEY',    'fn~0sA,>Eb{7mcCfgYQN;*tD`c98Q$<hd/T.L-utFA_N(u !B3i|#Iccu7f>4k T' );
+// define( 'NONCE_KEY',        'CN`G;dzEB9D&g|YLO@_&]>vF{m-5#tfY<-/c%E6t+-l!Y#DIkPl3Eog:d1-y,@|q' );
+// define( 'AUTH_SALT',        'LCoog!EDu~iXszsx2~0,YF@>~kk4O~v@4l7EeX&79PCcm/~,eDu+./C!|[lP[.h~' );
+// define( 'SECURE_AUTH_SALT', '58~6es0%k4zZ5^r $U(.t]OGeC?WKPb(,)X!7Iw:^$>^#^KiYGFEW2J 5Xa30=_F' );
+// define( 'LOGGED_IN_SALT',   'vOf@%VV.?h*SAEnh%^Ufq;[r3`j(yqN24t}XXu8Z={#Lqv&7Z6H.@R(_Snc^jWf>' );
+// define( 'NONCE_SALT',       '0!MUGYbM:e$j~Hh*DptV5&vK|bOS`wd~*Np_sC(ik2k@$H,XgEN6MyV#oc/R8Y&2' );
+
+define('AUTH_KEY',         $_ENV["AUTH_KEY"]);
+define('SECURE_AUTH_KEY',  $_ENV["SECURE_AUTH_KEY"]);
+define('LOGGED_IN_KEY',    $_ENV["LOGGED_IN_KEY"]);
+define('NONCE_KEY',        $_ENV["NONCE_KEY"]);
+define('AUTH_SALT',        $_ENV["AUTH_SALT"]);
+define('SECURE_AUTH_SALT', $_ENV["SECURE_AUTH_SALT"]);
+define('LOGGED_IN_SALT',   $_ENV["LOGGED_IN_SALT"]);
+define('NONCE_SALT',       $_ENV["NONCE_SALT"]);
 
 /**#@-*/
 

@@ -19,23 +19,45 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
+// /** The name of the database for WordPress */
+// define( 'DB_NAME', 'd568qjgmi29ksc' );
+
+// /** MySQL database username */
+// define( 'DB_USER', 'prjyjuceufyhuo' );
+
+// /** MySQL database password */
+// define( 'DB_PASSWORD', '3a65e609ace0af28ac53b3047f5bcd4c2662af8267871cc0e5666db4f42dc3bc' );
+
+// /** MySQL hostname */
+// define( 'DB_HOST', 'ec2-3-89-214-80.compute-1.amazonaws.com:5432' );
+
+// /** Database charset to use in creating database tables. */
+// define( 'DB_CHARSET', 'utf8mb4' );
+
+// /** The database collate type. Don't change this if in doubt. */
+// define( 'DB_COLLATE', '' );
+
+// ** Heroku Postgres settings - from Heroku Environment ** //
+$db = parse_url($_ENV["DATABASE_URL"]);
+
+// ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'd568qjgmi29ksc' );
+define('DB_NAME', trim($db["path"],"/"));
 
 /** MySQL database username */
-define( 'DB_USER', 'prjyjuceufyhuo' );
+define('DB_USER', $db["user"]);
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '3a65e609ace0af28ac53b3047f5bcd4c2662af8267871cc0e5666db4f42dc3bc' );
+define('DB_PASSWORD', $db["pass"]);
 
 /** MySQL hostname */
-define( 'DB_HOST', 'ec2-3-89-214-80.compute-1.amazonaws.com' );
+define('DB_HOST', $db["host"]);
 
-/** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
 
-/** The database collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
 
 /**#@+
  * Authentication unique keys and salts.
